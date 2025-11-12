@@ -15,7 +15,7 @@ export async function POST(req) {
         email: body.email,
         message: body.message
     })
-    return Response.json({ success: true, message: "Database created successfully" })
+    return Response.json({ success: true, message: "Database created successfully"})
   } catch (error) {
     return Response.json({ success: false, error: error.message })
   }
