@@ -21,7 +21,7 @@ export default function Home() {
       showCursor: true,     // blinking cursor
       cursorChar: "|",      // customize cursor symbol
     });
-
+ 
     return () => {
       // Cleanup to prevent memory leaks
       typed.current.destroy();
@@ -39,8 +39,8 @@ export default function Home() {
           <span ref={el} className="text-purple-700" />
         </div>
         <div className="btn mt-10 sm:my-18 mx-2 flex gap-3 lg:gap-5 text-gray-300 text-[14px] sm:text-[16px] lg:text-[20px]">
-          <button className="border-2 border-gray-400 px-3 lg:px-4 py-3 rounded-md bg-[#202468] cursor-pointer"><a href="./resume.pdf" download={"resume"}>Download Resume</a></button>
-          <Link href={"https://github.com/Ramash7076?tab=repositories"}><button className="border-2 border-gray-400 px-3 lg:px-4 py-3 rounded-md bg-[#202468] cursor-pointer">Visit Projects</button></Link>
+          <button className="border-2 border-gray-400 px-3 lg:px-4 py-3 rounded-md bg-[#252556] cursor-pointer"><a href="./resume.pdf" download={"resume"}>Download Resume</a></button>
+          <Link href={"https://github.com/Ramash7076?tab=repositories"}><button className="border-2 border-gray-400 px-3 lg:px-4 py-3 rounded-md bg-[#252556] cursor-pointer">Visit Projects</button></Link>
         </div>
       </div>
 
@@ -61,7 +61,7 @@ export default function Home() {
     <div className="hr bg-gray-400 h-0.5 opacity-30 w-[90vw] sm:w-[85vw] mx-auto rounded-md"></div>
 
     <section className="w-[82vw] mx-auto my-8">
-      <h4 className="text-[12px] text-gray-600 my-1">What I have done so far</h4>
+      <h4 className="text-[12px] text-gray-500 my-1">What I have done so far</h4>
       <h1 className="text-2xl font-semibold">Work Experience</h1>
       <div className="my-8 hidden sm:block">
         <div className="flex justify-around items-end my-2">
@@ -84,42 +84,42 @@ export default function Home() {
         <div className="flex justify-around gap-2 lg:gap-10 mb-22">
           <div className="flex wrap-break-word flex-col ml-4">
             <div className="text-center">HTML</div>
-            <div className="desc text-[9px] text-gray-600 my-1 ml-4">
+            <div className="desc text-[9px] text-gray-500 my-1 ml-4">
               <div>The foundation of all web pages.</div>
               <div>I use HTML to structure content and ensure accessibility and SEO optimization across my projects.</div>
             </div>
           </div>
           <div className="flex wrap-break-word flex-col">
             <div className="text-center">CSS</div>
-            <div className="desc text-[9px] text-gray-600 my-1 ml-4">
+            <div className="desc text-[9px] text-gray-500 my-1 ml-4">
               <div>Responsible for styling and visual design.</div>
               <div>I create responsive, modern layouts using CSS Flexbox, Grid, and animations for smooth user experiences.</div>
             </div>
           </div>
           <div className="flex wrap-break-word flex-col">
             <div className="text-center">JavaScript</div>
-            <div className="desc text-[9px] text-gray-600 my-1 ml-4">
+            <div className="desc text-[9px] text-gray-500 my-1 ml-4">
               <div>Adds interactivity and logic to web applications.</div>
               <div>I use JavaScript for DOM manipulation, API integration, and creating dynamic, data-driven interfaces.</div>
             </div>
           </div>
           <div className="flex wrap-break-word flex-col ">
             <div className="text-center">Node.js</div>
-            <div className="desc text-[9px] text-gray-600 my-1 ml-6">
+            <div className="desc text-[9px] text-gray-500 my-1 ml-6">
               <div>Server-side JavaScript runtime.</div>
               <div>I build RESTful APIs and backend logic using Node.js and integrate with databases like MongoDB.</div>
             </div>
           </div>
           <div className="flex wrap-break-word flex-col">
             <div className="text-center">React</div>
-            <div className="desc text-[9px] text-gray-600 my-1 ml-7">
+            <div className="desc text-[9px] text-gray-500 my-1 ml-7">
               <div>A powerful JavaScript library for building UIs.</div>
               <div>I develop modular, component-based applications using React Hooks and state management libraries.</div>
             </div>
           </div>
           <div className="flex wrap-break-word flex-col mr-4">
             <div className="text-center">Next.js</div>
-            <div className="desc text-[9px] text-gray-600 my-1 ml-5">
+            <div className="desc text-[9px] text-gray-500 my-1 ml-5">
               <div>A full-stack React framework.</div>
               <div>I build fast, SEO-friendly web apps with server-side rendering (SSR), API routes, and dynamic routing.</div>
             </div>
@@ -139,7 +139,7 @@ export default function Home() {
           <div className="mb-3"><img height={40} width={70} src="/nextjs.png" alt="nextjs" className="object-contain" /></div>
         </div>
 
-        <div className="vr bg-gray-400 w-1 opacity-80 h-120 o rounded-md"></div>
+        <div className="vr bg-gray-400 w-1 opacity-80 h-150 rounded-md"></div>
 
         <div className="flex flex-col justify-around">
           <div className="hr bg-gray-400 h-0.5 opacity-80 w-[10vw]  rounded-r-md"></div>
@@ -158,27 +158,27 @@ export default function Home() {
           <div className="mx-2">Next.js</div>
         </div>
         <div className="flex flex-col justify-around gap-2">
-          <div className="desc text-[9px] text-gray-600 mx-2">
+          <div className="desc text-[9px] text-gray-500 mx-2">
             <div>The foundation of all web pages.</div>
             <div>I use HTML to structure content and ensure accessibility and SEO optimization across my projects.</div>
           </div>
-          <div className="desc text-[9px] text-gray-600 mx-2">
+          <div className="desc text-[9px] text-gray-500 mx-2">
             <div>Responsible for styling and visual design.</div>
             <div>I create responsive, modern layouts using CSS Flexbox, Grid, and animations for smooth user experiences.</div>
           </div>
-          <div className="desc text-[9px] text-gray-600 mx-2">
+          <div className="desc text-[9px] text-gray-500 mx-2">
             <div>Adds interactivity and logic to web applications.</div>
             <div>I use JavaScript for DOM manipulation, API integration, and creating dynamic, data-driven interfaces.</div>
           </div>
-          <div className="desc text-[9px] text-gray-600 mx-2">
+          <div className="desc text-[9px] text-gray-500 mx-2">
             <div>Server-side JavaScript runtime.</div>
             <div>I build RESTful APIs and backend logic using Node.js and integrate with databases like MongoDB.</div>
           </div>
-          <div className="desc text-[9px] text-gray-600 mx-2">
+          <div className="desc text-[9px] text-gray-500 mx-2">
             <div>A powerful JavaScript library for building UIs.</div>
             <div>I develop modular, component-based applications using React Hooks and state management libraries.</div>
           </div>
-          <div className="desc text-[9px] text-gray-600 mx-2">
+          <div className="desc text-[9px] text-gray-500 mx-2">
             <div>A full-stack React framework.</div>
             <div>I build fast, SEO-friendly web apps with server-side rendering (SSR), API routes, and dynamic routing.</div>
           </div>

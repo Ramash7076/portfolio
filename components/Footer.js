@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="absolute w-full sm:fixed lg:absolute sm:bottom-0 lg:bottom-auto bg-[rgb(17,17,54)] text-gray-600 py-6 mt-12 text-center flex flex-col-reverse gap-3 sm:flex-row justify-between px-12">
+    <footer className="absolute w-full sm:fixed lg:absolute sm:bottom-0 lg:bottom-auto bg-[#252556] text-gray-600 py-6 mt-12 text-center flex flex-col-reverse gap-3 sm:flex-row justify-between px-12">
       <p className="text-sm">Copyright © {new Date().getFullYear()} www.ramash.site | All rights reserved.</p>
       <div className="flex justify-center gap-3 text-xl">
         <Link href={"mailto:ramash7076@gmail.com"} className="hover:text-gray-300"><FaEnvelope /></Link>
