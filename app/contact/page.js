@@ -81,7 +81,7 @@ export default function Contact() {
       <section className="px-16 py-12 flex flex-col items-center gap-6">
 
         <h1 className="text-4xl font-bold text-purple-800">Contact Me</h1>
-        <p className="text-lg text-gray-600">
+        <p className="text-lg text-gray-500">
           Let’s connect! Feel free to send a message or reach me directly.
         </p>
 
@@ -124,7 +124,7 @@ export default function Contact() {
           </button>
         </form>
 
-        <div className="mt-8 text-gray-700">
+        <div className="mt-8 text-gray-500">
           <p><b>Email:</b> ramash7076@gmail.com</p>
           <p><b>Phone:</b> +91 95645 22231</p>
           <p><b>Location:</b> Kolkata, West Bengal</p>
