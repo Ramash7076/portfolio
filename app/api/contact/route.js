@@ -9,14 +9,15 @@ export async function POST(req) {
     const client = await clientPromise
     const db = client.db('portfolio')
 
-    const collection = await db.collection('contact')
+    const collection = db.collection('contact')
     const result = await collection.insertOne({
         name: body.name,
         email: body.email,
         message: body.message
     })
-    return Response.json({ success: true, message: "Database created successfully"})
+    return Response.json({ success: true, message: "Database created successfully"} )
   } catch (error) {
     return Response.json({ success: false, error: error.message })
   }
-}
+} 
+

@@ -1,9 +1,11 @@
 "use client";
 import React, { useState } from "react";
 import { ToastContainer, toast, Bounce } from "react-toastify";
+import { useRouter } from "next/navigation";
 
 export default function Contact() {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
+  const router = useRouter()
 
   const handleChange = (e) =>
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -17,7 +19,8 @@ export default function Contact() {
       "email": form.email,
       "message": form.message
     });
-
+   
+     
     const requestOptions = {
       method: "POST",
       headers: myHeaders,
@@ -39,6 +42,9 @@ export default function Contact() {
           theme: "dark",
           transition: Bounce,
         });
+        setTimeout(() => {
+          router.push("/")
+        }, 2000);
 
       })
       .catch((error) => {
