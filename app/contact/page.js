@@ -10,59 +10,44 @@ export default function Contact() {
   const handleChange = (e) =>
     setForm({ ...form, [e.target.name]: e.target.value });
 
-  const handleSubmit = (e) => {
-    const myHeaders = new Headers();
-    myHeaders.append("Content-Type", "application/json");
-
-    const raw = JSON.stringify({
-      "name": form.name,
-      "email": form.email,
-      "message": form.message
-    });
-   
-     
-    const requestOptions = {
-      method: "POST",
-      headers: myHeaders,
-      body: raw,
-      redirect: "follow"
-    };
-
-    fetch("/api/contact", requestOptions)
-      .then((response) => response.text())
-      .then((result) => {
-        toast.success('Your Message was sent successfully.', {
-          position: "top-center",
-          autoClose: 2000,
-          hideProgressBar: false,
-          closeOnClick: false,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-          theme: "dark",
-          transition: Bounce,
-        });
-        setTimeout(() => {
-          router.push("/")
-        }, 2000);
-
-      })
-      .catch((error) => {
-        toast.error(error.message, {
-          position: "top-center",
-          autoClose: 2000,
-          hideProgressBar: false,
-          closeOnClick: false,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-          theme: "dark",
-          transition: Bounce,
-        });
-      });
+  const handleSubmit = async (e) => {
     e.preventDefault();
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(form),
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        toast.success("Your Message was sent successfully.", {
+          position: "top-center",
+          autoClose: 2000,
+          theme: "dark",
+          transition: Bounce,
+        });
+
+        setTimeout(() => router.push("/"), 2000);
+      } else {
+        throw new Error(result.error);
+      }
+    } catch (error) {
+      toast.error(error.message, {
+        position: "top-center",
+        autoClose: 2000,
+        theme: "dark",
+        transition: Bounce,
+      });
+    }
+
     setForm({ name: "", email: "", message: "" });
   };
+
 
   return (
     <><ToastContainer

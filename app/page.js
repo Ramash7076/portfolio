@@ -21,7 +21,7 @@ export default function Home() {
       showCursor: true,     // blinking cursor
       cursorChar: "|",      // customize cursor symbol
     });
- 
+
     return () => {
       // Cleanup to prevent memory leaks
       typed.current.destroy();
@@ -29,7 +29,7 @@ export default function Home() {
   }, []);
 
   return (<>
-    <section className="flex flex-col sm:flex-row lg:justify-around justify-center items-center gap-9 my-14 ">
+    <section className="container mx-auto flex flex-col sm:flex-row lg:justify-around justify-center items-center gap-9 my-14 ">
       <div className="first w-[80vw] sm:w-[50%] lg:w-[40%] mx-auto sm:mx-0 text-2xl sm:text-3xl lg:text-[2.75rem] sm:pl-5 lg:pl-17 flex flex-col justify-center">
         <div className="mb-2">
           Hi, My name is <span className="text-purple-900 font-semibold">Ramash</span>
@@ -63,97 +63,258 @@ export default function Home() {
     <section className="w-[82vw] mx-auto my-8">
       <h4 className="text-[12px] text-gray-500 my-1">What I have done so far</h4>
       <h1 className="text-2xl font-semibold">Work Experience</h1>
-      <div className="my-8 hidden sm:block">
+      <div className="my-8 hidden lg:block">
         <div className="flex justify-around items-end my-2">
-          <div className="ml-2"><img height={20} width={23} src="/html.png" alt="html" className="object-contain" /></div>
-          <div className="ml-4"><img height={20} width={23} src="/css.png" alt="css" className="object-contain" /></div>
-          <div className="ml-4"><img height={20} width={23} src="/javascript.png" alt="javascript" className="object-contain" /></div>
-          <div className=""><img height={20} width={45} src="/nodejs.png" alt="nodejs" className="object-contain" /></div>
-          <div className=""><img height={20} width={30} src="/react.png" alt="react" className="object-contain" /></div>
-          <div><img height={20} width={45} src="/nextjs.png" alt="nextjs" className="object-contain" /></div>
+          <div className=""><img height={20} width={23} src="https://www.vectorlogo.zone/logos/w3_html5/w3_html5-icon.svg" alt="html" className="object-contain" /></div>
+          <div className="ml-1"><img height={20} width={23} src="https://www.vectorlogo.zone/logos/w3_css/w3_css-icon.svg" alt="css" className="object-contain" /></div>
+          <div className=""><img height={20} width={23} src="https://www.vectorlogo.zone/logos/javascript/javascript-icon.svg" alt="javascript" className="object-contain" /></div>
+          <div className=""><img height={20} width={23} src="https://www.vectorlogo.zone/logos/nodejs/nodejs-icon.svg" alt="nodejs" className="object-contain" /></div>
+          <div className="mr-2"><img height={20} width={23} src="https://www.vectorlogo.zone/logos/expressjs/expressjs-icon.svg" alt="javascript" className="object-contain invert" /></div>
+          <div className="mr-5"><img height={20} width={30} src="https://www.vectorlogo.zone/logos/mongodb/mongodb-icon.svg" alt="nodejs" className="object-contain" /></div>
+          <div className=""><img height={20} width={28} src="https://www.vectorlogo.zone/logos/reactjs/reactjs-icon.svg" alt="react" className="object-contain" /></div>
+          <div className=""><img height={20} width={28} src="https://www.vectorlogo.zone/logos/nextjs/nextjs-icon.svg" alt="nextjs" className="object-contain" /></div>
+
         </div>
-        <div className="hr bg-gray-400 h-0.5 opacity-80 w-[80vw] rounded-md"></div>
+        <div className="hr bg-gray-400 h-0.5 opacity-30 w-[80vw] rounded-md"></div>
         <div className="flex justify-around">
-          <div className="vr bg-gray-400 w-[3px] opacity-80 h-30 rounded-b-md"></div>
-          <div className="vr bg-gray-400 w-[3px] opacity-80 h-30 rounded-b-md"></div>
-          <div className="vr bg-gray-400 w-[3px] opacity-80 h-30 rounded-b-md"></div>
-          <div className="vr bg-gray-400 w-[3px] opacity-80 h-30 rounded-b-md"></div>
-          <div className="vr bg-gray-400 w-[3px] opacity-80 h-30 rounded-b-md"></div>
-          <div className="vr bg-gray-400 w-[3px] opacity-80 h-30 rounded-b-md"></div>
+          <div className="flex flex-col items-center">
+            <div className="vr bg-gray-400 w-[3px] opacity-30 h-30 rounded-b-md"></div>
+            <div className="flex justify-around gap-2 lg:gap-10 mb-22">
+              <div className="flex wrap-break-word flex-col ml-4">
+                <div className="text-center">HTML</div>
+                <div className="desc text-[9px] text-gray-500 my-1 ml-4">
+                  <div>The foundation of all web pages.</div>
+                  <div>I use HTML to structure content and ensure accessibility and SEO optimization across my projects.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="flex flex-col items-center">
+            <div className="vr bg-gray-400 w-[3px] opacity-30 h-30 rounded-b-md"></div>
+            <div className="flex wrap-break-word flex-col">
+              <div className="text-center">CSS</div>
+              <div className="desc text-[9px] text-gray-500 my-1 ml-4">
+                <div>Responsible for styling and visual design.</div>
+                <div>I create responsive, modern layouts using CSS Flexbox, Grid, and animations for smooth user experiences.</div>
+              </div>
+            </div>
+          </div>
+          <div className="flex flex-col items-center">
+            <div className="vr bg-gray-400 w-[3px] opacity-30 h-30 rounded-b-md"></div>
+            <div className="flex wrap-break-word flex-col">
+              <div className="text-center">JavaScript</div>
+              <div className="desc text-[9px] text-gray-500 my-1 ml-4">
+                <div>Adds interactivity and logic to web applications.</div>
+                <div>I use JavaScript for DOM manipulation, API integration, and creating dynamic, data-driven interfaces.</div>
+              </div>
+            </div>
+          </div>
+          <div className="flex flex-col items-center">
+            <div className="vr bg-gray-400 w-[3px] opacity-30 h-30 rounded-b-md"></div>
+            <div className="flex wrap-break-word flex-col ">
+              <div className="text-center">Node.js</div>
+              <div className="desc text-[9px] text-gray-500 my-1 ml-6">
+                <div>Server-side JavaScript runtime.</div>
+                <div>I build RESTful APIs and backend logic using Node.js and integrate with databases like MongoDB.</div>
+              </div>
+            </div>
+          </div>
+          <div className="flex flex-col items-center">
+            <div className="vr bg-gray-400 w-[3px] opacity-30 h-30 rounded-b-md"></div>
+            <div className="flex wrap-break-word flex-col">
+              <div className="text-center">Express.js</div>
+              <div className="desc text-[9px] text-gray-500 my-1 ml-5">
+                <div>A minimal and fast Node.js web framework.</div>
+                <div>I build backend APIs using Express.js with clean routing, middleware, and efficient request handling.</div>
+              </div>
+            </div>
+          </div>
+          <div className="flex flex-col items-center">
+            <div className="vr bg-gray-400 w-[3px] opacity-30 h-30 rounded-b-md"></div>
+            <div className="flex wrap-break-word flex-col">
+              <div className="text-center">MongoDB</div>
+              <div className="desc text-[9px] text-gray-500 my-1 ml-5">
+                <div>A NoSQL database for modern applications.</div>
+                <div>I use MongoDB to store flexible JSON-like data with high performance, scalability, and easy integration with backend APIs.</div>
+              </div>
+            </div>
+          </div>
+          <div className="flex flex-col items-center">
+            <div className="vr bg-gray-400 w-[3px] opacity-30 h-30 rounded-b-md"></div>
+            <div className="flex wrap-break-word flex-col">
+              <div className="text-center">React</div>
+              <div className="desc text-[9px] text-gray-500 my-1 ml-7">
+                <div>A powerful JavaScript library for building UIs.</div>
+                <div>I develop modular, component-based applications using React Hooks and state management libraries.</div>
+              </div>
+            </div>
+          </div>
+          <div className="flex flex-col items-center">
+            <div className="vr bg-gray-400 w-[3px] opacity-30 h-30 rounded-b-md"></div>
+            <div className="flex wrap-break-word flex-col mr-4">
+              <div className="text-center">Next.js</div>
+              <div className="desc text-[9px] text-gray-500 my-1 ml-5">
+                <div>A full-stack React framework.</div>
+                <div>I build fast, SEO-friendly web apps with server-side rendering (SSR), API routes, and dynamic routing.</div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div className="flex justify-around gap-2 lg:gap-10 mb-22">
-          <div className="flex wrap-break-word flex-col ml-4">
-            <div className="text-center">HTML</div>
-            <div className="desc text-[9px] text-gray-500 my-1 ml-4">
-              <div>The foundation of all web pages.</div>
-              <div>I use HTML to structure content and ensure accessibility and SEO optimization across my projects.</div>
+
+      </div>
+
+      {/* for tablet */}
+      <div className="hidden sm:block lg:hidden">
+        <div className="flex mt-8 mb-32">
+          <div className="vr bg-gray-400 w-1 opacity-30 h-150 rounded-md"></div>
+          <div className="flex flex-col justify-around">
+
+            <div>
+              <div className="flex justify-around mb-1.5">
+                <div className="ml-0.5"><img height={20} width={23} src="https://www.vectorlogo.zone/logos/w3_html5/w3_html5-icon.svg" alt="html" className="object-contain" /></div>
+                <div className="ml-1"><img height={20} width={23} src="https://www.vectorlogo.zone/logos/w3_css/w3_css-icon.svg" alt="css" className="object-contain" /></div>
+                <div className="ml-2"><img height={20} width={23} src="https://www.vectorlogo.zone/logos/javascript/javascript-icon.svg" alt="javascript" className="object-contain" /></div>
+                <div className=""><img height={20} width={23} src="https://www.vectorlogo.zone/logos/nodejs/nodejs-icon.svg" alt="nodejs" className="object-contain" /></div>
+              </div>
+              <div className="hr bg-gray-400 h-0.5 opacity-30 w-[80vw] rounded-md"></div>
+              <div className="flex justify-around ">
+
+                <div className="flex flex-col items-center">
+                  <div className="vr bg-gray-400 w-0.5 opacity-30 h-15 rounded-b-md"></div>
+                  <div className="flex justify-around gap-2 lg:gap-10 ">
+                    <div className="flex wrap-break-word flex-col ml-4">
+                      <div className="text-center">HTML</div>
+                      <div className="desc text-[9px] text-gray-500 my-1 ml-4">
+                        <div>The foundation of all web pages.</div>
+                        <div>I use HTML to structure content and ensure accessibility and SEO optimization across my projects.</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="flex flex-col items-center">
+                  <div className="vr bg-gray-400 w-0.5 opacity-30 h-15 rounded-b-md"></div>
+                  <div className="flex wrap-break-word flex-col">
+                    <div className="text-center">CSS</div>
+                    <div className="desc text-[9px] text-gray-500 my-1 ml-4">
+                      <div>Responsible for styling and visual design.</div>
+                      <div>I create responsive, modern layouts using CSS Flexbox, Grid, and animations for smooth user experiences.</div>
+                    </div>
+                  </div>
+                </div>
+                <div className="flex flex-col items-center">
+                  <div className="vr bg-gray-400 w-0.5 opacity-30 h-15 rounded-b-md"></div>
+                  <div className="flex wrap-break-word flex-col">
+                    <div className="text-center">JavaScript</div>
+                    <div className="desc text-[9px] text-gray-500 my-1 ml-4">
+                      <div>Adds interactivity and logic to web applications.</div>
+                      <div>I use JavaScript for DOM manipulation, API integration, and creating dynamic, data-driven interfaces.</div>
+                    </div>
+                  </div>
+                </div>
+                <div className="flex flex-col items-center">
+                  <div className="vr bg-gray-400 w-0.5 opacity-30 h-15 rounded-b-md"></div>
+                  <div className="flex wrap-break-word flex-col ">
+                    <div className="text-center">Node.js</div>
+                    <div className="desc text-[9px] text-gray-500 my-1 ml-6">
+                      <div>Server-side JavaScript runtime.</div>
+                      <div>I build RESTful APIs and backend logic using Node.js and integrate with databases like MongoDB.</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
-          <div className="flex wrap-break-word flex-col">
-            <div className="text-center">CSS</div>
-            <div className="desc text-[9px] text-gray-500 my-1 ml-4">
-              <div>Responsible for styling and visual design.</div>
-              <div>I create responsive, modern layouts using CSS Flexbox, Grid, and animations for smooth user experiences.</div>
-            </div>
-          </div>
-          <div className="flex wrap-break-word flex-col">
-            <div className="text-center">JavaScript</div>
-            <div className="desc text-[9px] text-gray-500 my-1 ml-4">
-              <div>Adds interactivity and logic to web applications.</div>
-              <div>I use JavaScript for DOM manipulation, API integration, and creating dynamic, data-driven interfaces.</div>
-            </div>
-          </div>
-          <div className="flex wrap-break-word flex-col ">
-            <div className="text-center">Node.js</div>
-            <div className="desc text-[9px] text-gray-500 my-1 ml-6">
-              <div>Server-side JavaScript runtime.</div>
-              <div>I build RESTful APIs and backend logic using Node.js and integrate with databases like MongoDB.</div>
-            </div>
-          </div>
-          <div className="flex wrap-break-word flex-col">
-            <div className="text-center">React</div>
-            <div className="desc text-[9px] text-gray-500 my-1 ml-7">
-              <div>A powerful JavaScript library for building UIs.</div>
-              <div>I develop modular, component-based applications using React Hooks and state management libraries.</div>
-            </div>
-          </div>
-          <div className="flex wrap-break-word flex-col mr-4">
-            <div className="text-center">Next.js</div>
-            <div className="desc text-[9px] text-gray-500 my-1 ml-5">
-              <div>A full-stack React framework.</div>
-              <div>I build fast, SEO-friendly web apps with server-side rendering (SSR), API routes, and dynamic routing.</div>
+
+            <div>
+              <div className="flex justify-around mb-1.5">
+                <div className="mr-2"><img height={20} width={23} src="https://www.vectorlogo.zone/logos/expressjs/expressjs-icon.svg" alt="javascript" className="object-contain invert" /></div>
+                <div className="mr-2.5"><img height={20} width={30} src="https://www.vectorlogo.zone/logos/mongodb/mongodb-icon.svg" alt="nodejs" className="object-contain" /></div>
+                <div className=""><img height={20} width={28} src="https://www.vectorlogo.zone/logos/reactjs/reactjs-icon.svg" alt="react" className="object-contain" /></div>
+                <div className=""><img height={20} width={28} src="https://www.vectorlogo.zone/logos/nextjs/nextjs-icon.svg" alt="nextjs" className="object-contain" /></div>
+              </div>
+              <div className="hr bg-gray-400 h-0.5 opacity-30 w-[80vw] rounded-md"></div>
+              <div className="flex justify-around ">
+
+                <div className="flex flex-col items-center">
+                  <div className="vr bg-gray-400 w-[3px] opacity-30 h-15 rounded-b-md"></div>
+                  <div className="flex wrap-break-word flex-col">
+                    <div className="text-center">Express.js</div>
+                    <div className="desc text-[9px] text-gray-500 my-1 ml-5">
+                      <div>A minimal and fast Node.js web framework.</div>
+                      <div>I build backend APIs using Express.js with clean routing, middleware, and efficient request handling.</div>
+                    </div>
+                  </div>
+                </div>
+                <div className="flex flex-col items-center">
+                  <div className="vr bg-gray-400 w-[3px] opacity-30 h-15 rounded-b-md"></div>
+                  <div className="flex wrap-break-word flex-col">
+                    <div className="text-center">MongoDB</div>
+                    <div className="desc text-[9px] text-gray-500 my-1 ml-5">
+                      <div>A NoSQL database for modern applications.</div>
+                      <div>I use MongoDB to store flexible JSON-like data with high performance, scalability, and easy integration with backend APIs.</div>
+                    </div>
+                  </div>
+                </div>
+                <div className="flex flex-col items-center">
+                  <div className="vr bg-gray-400 w-[3px] opacity-30 h-15 rounded-b-md"></div>
+                  <div className="flex wrap-break-word flex-col">
+                    <div className="text-center">React</div>
+                    <div className="desc text-[9px] text-gray-500 my-1 ml-7">
+                      <div>A powerful JavaScript library for building UIs.</div>
+                      <div>I develop modular, component-based applications using React Hooks and state management libraries.</div>
+                    </div>
+                  </div>
+                </div>
+                <div className="flex flex-col items-center">
+                  <div className="vr bg-gray-400 w-[3px] opacity-30 h-15 rounded-b-md"></div>
+                  <div className="flex wrap-break-word flex-col mr-4">
+                    <div className="text-center">Next.js</div>
+                    <div className="desc text-[9px] text-gray-500 my-1 ml-5">
+                      <div>A full-stack React framework.</div>
+                      <div>I build fast, SEO-friendly web apps with server-side rendering (SSR), API routes, and dynamic routing.</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
+
+
       {/* for Phone */}
       <div className="my-8 sm:hidden flex">
 
         <div className="flex flex-col justify-around mx-2">
-          <div><img height={20} width={23} src="/html.png" alt="html" className="object-contain" /></div>
-          <div><img height={20} width={23} src="/css.png" alt="css" className="object-contain" /></div>
-          <div className="mb-2"><img height={20} width={23} src="/javascript.png" alt="javascript" className="object-contain" /></div>
-          <div className="mb-2"><img height={20} width={50} src="/nodejs.png" alt="nodejs" className="object-contain" /></div>
-          <div className="mb-3"><img height={20} width={30} src="/react.png" alt="react" className="object-contain" /></div>
-          <div className="mb-3"><img height={40} width={70} src="/nextjs.png" alt="nextjs" className="object-contain" /></div>
+          <div className=""><img height={20} width={27} src="https://www.vectorlogo.zone/logos/w3_html5/w3_html5-icon.svg" alt="html" className="object-contain" /></div>
+          <div className=""><img height={20} width={23} src="https://www.vectorlogo.zone/logos/w3_css/w3_css-icon.svg" alt="css" className="object-contain" /></div>
+          <div className=""><img height={20} width={23} src="https://www.vectorlogo.zone/logos/javascript/javascript-icon.svg" alt="javascript" className="object-contain" /></div>
+          <div className=""><img height={20} width={50} src="https://www.vectorlogo.zone/logos/nodejs/nodejs-icon.svg" alt="nodejs" className="object-contain" /></div>
+          <div className=" invert"><img height={20} width={23} src="https://www.vectorlogo.zone/logos/expressjs/expressjs-icon.svg" alt="javascript" className="object-contain" /></div>
+          <div className=""><img height={20} width={28} src="https://www.vectorlogo.zone/logos/mongodb/mongodb-icon.svg" alt="javascript" className="object-contain" /></div>
+          <div className=""><img height={20} width={32} src="https://www.vectorlogo.zone/logos/reactjs/reactjs-icon.svg" alt="react" className="object-contain" /></div>
+          <div className=""><img height={40} width={70} src="https://www.vectorlogo.zone/logos/nextjs/nextjs-icon.svg" alt="nextjs" className="object-contain" /></div>
         </div>
 
-        <div className="vr bg-gray-400 w-1 opacity-80 h-150 rounded-md"></div>
+        <div className="vr bg-gray-400 w-1 opacity-30 h-200 rounded-md"></div>
 
         <div className="flex flex-col justify-around">
-          <div className="hr bg-gray-400 h-0.5 opacity-80 w-[10vw]  rounded-r-md"></div>
-          <div className="hr bg-gray-400 h-0.5 opacity-80 w-[10vw]  rounded-r-md"></div>
-          <div className="hr bg-gray-400 h-0.5 opacity-80 w-[10vw]  rounded-r-md"></div>
-          <div className="hr bg-gray-400 h-0.5 opacity-80 w-[10vw]  rounded-r-md"></div>
-          <div className="hr bg-gray-400 h-0.5 opacity-80 w-[10vw]  rounded-r-md"></div>
-          <div className="hr bg-gray-400 h-0.5 opacity-80 w-[10vw]  rounded-r-md"></div>
+          <div className="hr bg-gray-400 h-0.5 opacity-30 w-[10vw]  rounded-r-md"></div>
+          <div className="hr bg-gray-400 h-0.5 opacity-30 w-[10vw]  rounded-r-md"></div>
+          <div className="hr bg-gray-400 h-0.5 opacity-30 w-[10vw]  rounded-r-md"></div>
+          <div className="hr bg-gray-400 h-0.5 opacity-30 w-[10vw]  rounded-r-md"></div>
+          <div className="hr bg-gray-400 h-0.5 opacity-30 w-[10vw]  rounded-r-md"></div>
+          <div className="hr bg-gray-400 h-0.5 opacity-30 w-[10vw]  rounded-r-md"></div>
+          <div className="hr bg-gray-400 h-0.5 opacity-30 w-[10vw]  rounded-r-md"></div>
+          <div className="hr bg-gray-400 h-0.5 opacity-30 w-[10vw]  rounded-r-md"></div>
         </div>
         <div className="flex flex-col justify-around text-sm">
           <div className="mx-2">HTML</div>
           <div className="mx-2">CSS</div>
           <div className="mx-2">JavaScript</div>
           <div className="mx-2">Node.js</div>
+          <div className="mx-2">Express.js</div>
+          <div className="mx-2">MongoDB</div>
           <div className="mx-2">React</div>
           <div className="mx-2">Next.js</div>
         </div>
@@ -173,6 +334,14 @@ export default function Home() {
           <div className="desc text-[9px] text-gray-500 mx-2">
             <div>Server-side JavaScript runtime.</div>
             <div>I build RESTful APIs and backend logic using Node.js and integrate with databases like MongoDB.</div>
+          </div>
+          <div className="desc text-[9px] text-gray-500 mx-2">
+            <div>A minimal and fast Node.js web framework.</div>
+            <div>I build backend APIs using Express.js with clean routing, middleware, and efficient request handling.</div>
+          </div>
+          <div className="desc text-[9px] text-gray-500 mx-2">
+            <div>A NoSQL database for modern applications.</div>
+            <div>I use MongoDB to store flexible JSON-like data with high performance, scalability, and easy integration with backend APIs.</div>
           </div>
           <div className="desc text-[9px] text-gray-500 mx-2">
             <div>A powerful JavaScript library for building UIs.</div>
