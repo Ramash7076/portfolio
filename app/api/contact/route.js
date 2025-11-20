@@ -1,6 +1,7 @@
 
 import clientPromise from '@/lib/mongodb'
 import { Resend } from 'resend';
+import { Twilio } from 'twilio';
 
 
 const resend = new Resend(process.env.RESEND_API_KEY);
@@ -18,6 +19,18 @@ async function sendEmailNotification({ name, email, message }) {
     `,
   });
 }
+// async function sendSmsNotification({ name, email, message }) {
+//   const client = Twilio(
+//       process.env.TWILIO_ACCOUNT_SID,
+//       process.env.TWILIO_AUTH_TOKEN
+//     );
+
+//     await client.messages.create({
+//       body: `New Contact Message:\nName: ${name}\nEmail: ${email}\nMessage: ${message}`,
+//       from: process.env.TWILIO_PHONE_NUMBER,
+//       to: process.env.MY_PHONE_NUMBER, // your personal number
+//     });
+// }
 
 // async function sendWhatsAppNotification({name, email, message}) {
 
@@ -58,6 +71,19 @@ export async function POST(req) {
 
     const collection = db.collection('contact')
     const result = await collection.insertOne(body)
+
+    const cl = new Twilio(
+      process.env.TWILIO_ACCOUNT_SID,
+      process.env.TWILIO_AUTH_TOKEN
+    );
+
+    await cl.messages.create({
+      body: `New Contact Message:\nName: ${body.name}\nEmail: ${body.email}\nMessage: ${body.message}`,
+      from: process.env.TWILIO_PHONE_NUMBER,
+      to: process.env.MY_PHONE_NUMBER, // your personal number
+    });
+
+
     // await sendWhatsAppNotification({
     //   name: body.name,
     //   email: body.email,
